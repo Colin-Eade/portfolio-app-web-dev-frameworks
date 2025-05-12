@@ -1,0 +1,44 @@
+.richText p {
+    margin-bottom: 1rem;
+}
+
+.richText ul, 
+.richText ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.richText h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.67em 0;
+}
+
+.richText h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.83em 0;
+}
+
+.richText h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.richText pre {
+  background-color: #f7fafc;
+  padding: 0.5em;
+  border-radius: 0.375rem;
+  font-family: monospace;
+  white-space: pre-wrap;      
+  word-wrap: break-word;      
+  overflow-x: auto;           
+  max-width: 100%;            
+}
+
+.richText code {
+  font-family: monospace;
+  word-wrap: break-word;       
+  white-space: pre-wrap;       
+}
