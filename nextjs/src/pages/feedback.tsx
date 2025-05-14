@@ -34,6 +34,10 @@ const Feedback = () => {
     setCursor(undefined);
   };
 
+  const handleFeedbackSubmitted = () => {
+    setCursor(undefined);
+  };
+
   const loadMore = () => {
     if (data?.nextCursor && !isFetching) {
       setCursor(data.nextCursor);
@@ -43,7 +47,11 @@ const Feedback = () => {
   return (
     <Layout title="Feedback" backNav={{ title: 'Home', link: '/' }}>
       <AddFeedbackCard onClick={onOpen} />
-      <FeedbackModal isOpen={isOpen} onClose={onClose} />
+      <FeedbackModal
+        isOpen={isOpen}
+        onClose={onClose}
+        onFeedbackSubmitted={handleFeedbackSubmitted}
+      />
 
       <Select
         w="200px"

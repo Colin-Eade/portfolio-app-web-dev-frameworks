@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   try {
     const slug = context.params?.slug;
     const skills = await fetchAPI<Skill[]>(
-      `/skills?slug=${slug}&populate=technologies`,
+      `/skills?filters[slug][$eq]=${slug}&populate=technologies`,
     );
     const skill = skills[0];
     return {

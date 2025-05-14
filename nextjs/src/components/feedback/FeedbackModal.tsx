@@ -28,9 +28,10 @@ import ConfirmationDialog from './ConfirmationDialog';
 interface Props {
   isOpen: boolean;
   onClose: () => void;
+  onFeedbackSubmitted: () => void;
 }
 
-const FeedbackModal = ({ isOpen, onClose }: Props) => {
+const FeedbackModal = ({ isOpen, onClose, onFeedbackSubmitted }: Props) => {
   const [createFeedback] = useCreateFeedbackMutation();
   const {
     handleSubmit,
@@ -60,6 +61,7 @@ const FeedbackModal = ({ isOpen, onClose }: Props) => {
       await createFeedback(data).unwrap();
       reset();
       setErrorMessage('');
+      onFeedbackSubmitted();
       onClose();
     } catch (error: any) {
       const message =
