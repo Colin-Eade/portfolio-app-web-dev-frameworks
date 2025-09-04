@@ -103,9 +103,9 @@ The application architecture emphasizes a separation of concerns between its dis
 
 ## Implementation Highlights
 
-### Microservice-Inspired Approach
+### Service-Oriented Approach
 
-- Demonstrates microservice-inspired principles with clear boundaries between the presentation layer (Next.js), content management (Strapi), and dynamic data persistence (DynamoDB via Next.js API routes).
+- Demonstrates service-oriented architecture principles with clear boundaries between the presentation layer (Next.js), content management (Strapi), and dynamic data persistence (DynamoDB via Next.js API routes).
 
 ### Static Site Generation (SSG)
 
